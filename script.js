@@ -1,5 +1,14 @@
 function stringChop(str, size) {
   // your code here
+	if (size <= 0 || !str) {
+    return [];
+  }
+
+  const result = [];
+  for (let i = 0; i < str.length; i += size) {
+    result.push(str.substring(i, i + size));
+  }
+  return result;
 }
 
 // Do not change the code below
